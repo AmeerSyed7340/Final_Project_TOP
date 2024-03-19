@@ -1,6 +1,5 @@
 import './App.css'
 import LandingPage from './components/LandingPage'
-import LoginForm from './components/LoginForm'
 import HomePage from './components/HomePage'
 import ProtectedRoute from './components/ProtectedRoutes'
 import { useState } from 'react'

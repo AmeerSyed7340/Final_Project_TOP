@@ -1,12 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-
-function LoginForm() {
+function SignupForm() {
     function handleOnSubmit(event) {
         event.preventDefault();
     }
-
     return (
-
         <form onSubmit={handleOnSubmit} className='w-full max-w-xs p-6 bg-white rounded-lg shadow-md'>
             <div className="mb-4">
                 <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username:</label>
@@ -19,11 +15,10 @@ function LoginForm() {
             </div>
 
             <div className="flex justify-center">
-                <button type="submit" className='border border-gray-300 rounded-lg px-4 py-2 w-full bg-blue-200 hover:bg-blue-400'>Log In</button>
+                <button type="submit" className='border border-gray-300 rounded-lg px-4 py-2 w-full bg-blue-200 hover:bg-blue-400'>Sign Up</button>
             </div>
         </form>
-
-
-    );
+    )
 }
-export default LoginForm;
+
+export default SignupForm;
