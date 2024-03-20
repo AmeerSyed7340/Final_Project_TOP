@@ -11,7 +11,8 @@ function SignupForm() {
 
     function handleOnSubmit(event) {
         event.preventDefault();
-        fetch('http://127.0.0.1:3000', {
+        
+        fetch('http://127.0.0.1:3000/signup', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/JSON'
@@ -24,6 +25,8 @@ function SignupForm() {
         .then(response => response.json())
         .then(data => {{
             console.log('Success:', data);
+            setUsername('');
+            setPassword('');
         }})
         .catch((error) => console.error('Error:', error))
     }

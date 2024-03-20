@@ -6,14 +6,14 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-    const [authenticated, setAuthenticated] = useState(false);
+    const [token, setToken] = useState('');
     return (
         <>
             <Router>
                 <Routes>
-                    <Route path='/' element={<LandingPage setAuthenticated={setAuthenticated} />}></Route>
+                    <Route path='/' element={<LandingPage setToken={setToken}/>}></Route>
                     <Route path='/home' element={
-                        <ProtectedRoute authenticated={authenticated}>
+                        <ProtectedRoute token={token}>
                             <HomePage />
                         </ProtectedRoute>
                     }></Route>
