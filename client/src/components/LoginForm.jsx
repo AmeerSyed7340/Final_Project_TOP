@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
-function LoginForm({setToken}) {
+function LoginForm({setToken, setUser}) {
     //states to handle input fields 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -31,6 +31,7 @@ function LoginForm({setToken}) {
             setToken(data.token);
             setUsername('');
             setPassword('');
+            setUser(data.user);
             navigate('/home')
             
         }})

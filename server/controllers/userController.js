@@ -44,7 +44,7 @@ exports.findUser = asyncHandler(async (req, res, next) => {
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' })
 
         //return jwt
-        res.json({ token });
+        res.json({ user, token});
     } catch (error) {
         return next(error);
     }
